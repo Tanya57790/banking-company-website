@@ -1,0 +1,42 @@
+{
+  "name": "banking-company-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "clean": "pnpm store prune && pnpm rm -rf .next",
+    "analyzer": "pnpm dlx cross-env ANALYZE=true pnpm build",
+    "build:start": "pnpm run build && pnpm start",
+    "build": "prisma generate && next build --webpack",
+    "postinstall": "prisma generate",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "@node-rs/argon2": "^2.0.2",
+    "@prisma/adapter-mariadb": "^7.7.0",
+    "@prisma/client": "^7.7.0",
+    "@types/nodemailer": "^8.0.0",
+    "better-auth": "^1.6.0",
+    "dotenv": "^17.4.1",
+    "next": "16.2.2",
+    "nodemailer": "^8.0.5",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-hook-form": "^7.72.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^16.2.2",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.2",
+    "prisma": "^7.7.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
