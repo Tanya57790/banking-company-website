@@ -26,6 +26,9 @@ const MobileMenu = ({ handler, isOpen }: MobileMenuProps) => {
           name="close"
           className="absolute text-white-absolute right-6"
           onClick={handler}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
+          aria-label="Toggle navigation"
         >
           X
         </button>
