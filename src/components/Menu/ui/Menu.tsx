@@ -4,11 +4,11 @@ import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import { navLinks, login } from "./data";
 
-type Handler = {
+type MenuProps = {
   handler: () => void;
 };
 
-const Menu = ({ handler }: Handler) => {
+const Menu = ({ handler }: MenuProps) => {
   return (
     <>
       <div>
