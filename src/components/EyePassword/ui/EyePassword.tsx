@@ -9,7 +9,7 @@ const EyePassword = ({ onClick, isOpenEye }: EyePasswordProps) => {
   return (
     <span
       onClick={onClick}
-      className="absolute top-4.5 right-0 mt-1.5 mr-4.5 cursor-pointer"
+      className="absolute top-4.5 right-0 mt-1.5 2xl:mt-3 mr-4 xl:mr-5 2xl:mr-6 cursor-pointer"
     >
       <svg
         width="18"
