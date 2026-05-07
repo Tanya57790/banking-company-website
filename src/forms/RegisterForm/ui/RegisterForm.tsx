@@ -26,7 +26,7 @@ const Form = () => {
       <form
         onSubmit={reg.handleSubmit(onSubmit)}
         method="POST"
-        className="relative w-full xl:w-166 2xl:w-256.5 m-auto z-2"
+        className="relative w-full lg:w-166 2xl:w-256.5 m-auto z-2"
       >
         <div className="sm:grid sm:grid-cols-[1fr_1fr] sm:gap-[30px_24px] sm:justify-items-center">
           {inputs.map((input) => {
@@ -40,7 +40,7 @@ const Form = () => {
                   {...register(`${input.name as keyof InferSchema}`)}
                   placeholder={input.placeholder}
                   autoComplete={input.autocomplete}
-                  className="text-grey-350 p-4 xl:p-5 2xl:p-6 font-lexend text-[16px] 2xl:text-lg font-light xl:w-[320px] xl:h-16 2xl:w-124.5 2xl:h-18.75 bg-grey-110 rounded-[88px] focus:outline-none"
+                  className="text-grey-350 p-4 xl:p-5 2xl:p-6 font-lexend font-light text-[16px] 2xl:text-lg lg:w-[320px] lg:h-16 2xl:w-124.5 2xl:h-18.75 bg-grey-110 rounded-[88px] focus:outline-none"
                 />
                 {input.name === "password" && (
                   <EyePassword onClick={togglePassword} isOpenEye={isOpenEye} />
