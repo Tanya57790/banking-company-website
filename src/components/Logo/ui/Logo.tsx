@@ -1,6 +1,12 @@
 "use client";
 
-const Logo = () => {
+type Variant = "header" | "footer";
+
+interface IconProps {
+  variant: Variant;
+}
+
+const Logo = ({ variant }: IconProps) => {
   return (
     <svg
       role="img"
@@ -11,7 +17,11 @@ const Logo = () => {
       viewBox="0 0 102 27"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="xl:w-29.25 xl:h-7.75 2xl:w-39 2xl:h-10.25"
+      className={`${
+        variant === "header"
+          ? "w-25.5 h-6.5 xl:w-29.25 xl:h-7.75 2xl:w-39 2xl:h-10.25"
+          : "w-33.25 h-8.5 2xl:w-39 2xl:h-10"
+      }`}
     >
       <path
         d="M6.5013 13.0001L13.0013 6.50008L19.5013 13.0001L13.0013 19.5001L6.5013 13.0001Z"
