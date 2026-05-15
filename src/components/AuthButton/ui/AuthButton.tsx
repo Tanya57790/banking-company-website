@@ -26,7 +26,7 @@ const AuthButton = ({ provider }: AuthButtonProps) => {
       {provider === "facebook" && (
         <div className={containerClass}>
           <button onClick={getSocialHandler(provider)} className={buttonClass}>
-            <FacebookIcon />
+            <FacebookIcon variant="form" />
           </button>
         </div>
       )}

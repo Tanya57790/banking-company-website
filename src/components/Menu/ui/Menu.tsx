@@ -11,9 +11,7 @@ type MenuProps = {
 const Menu = ({ handler }: MenuProps) => {
   return (
     <>
-      <div>
-        <Logo />
-      </div>
+      <Logo variant="header" />
       <ul className="hidden md:flex items-center justify-between w-auto">
         {navLinks.map((link) => (
           <li key={link.id}>
