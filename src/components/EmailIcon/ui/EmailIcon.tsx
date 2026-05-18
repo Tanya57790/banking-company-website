@@ -4,7 +4,6 @@ const EmailIcon = () => {
   return (
     <svg
       role="img"
-      aria-label="Email Icon"
       aria-hidden="true"
       width="18"
       height="14"

@@ -4,7 +4,6 @@ const PhoneIcon = () => {
   return (
     <svg
       role="img"
-      aria-label="Phone Icon"
       aria-hidden="true"
       width="18"
       height="18"

@@ -5,7 +5,6 @@ const InstagramIcon = () => {
     <svg
       role="img"
       aria-label="Instagram Icon"
-      aria-hidden="true"
       width="20"
       height="20"
       viewBox="0 0 20 20"

@@ -4,7 +4,6 @@ const MarkIcon = () => {
   return (
     <svg
       role="img"
-      aria-label="Mark Icon"
       aria-hidden="true"
       width="14"
       height="17"

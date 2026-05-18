@@ -5,7 +5,6 @@ const TwitterIcon = () => {
     <svg
       role="img"
       aria-label="Twitter Icon"
-      aria-hidden="true"
       width="20"
       height="17"
       viewBox="0 0 20 17"
