@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
-import { navLinks, login } from "./data";
+import { Nav } from "@/components/Nav";
+import { login } from "@/components/Nav/ui/data";
 
 type MenuProps = {
   handler: () => void;
@@ -12,18 +13,7 @@ const Menu = ({ handler }: MenuProps) => {
   return (
     <>
       <Logo variant="header" />
-      <ul className="hidden md:flex items-center justify-between w-auto">
-        {navLinks.map((link) => (
-          <li key={link.id}>
-            <Link
-              href={link.href}
-              className="flex items-center justify-center font-lexend text-sm 2xl:text-lg text-white-absolute h-10.25 2xl:h-12.75 mx-0.75 xl:mx-1.5 2xl:mx-1.75 px-2.5 lg:px-4.5 2xl:px-5 hover:bg-grey-150 hover:rounded-[82px] transition-all duration-200 ease-in-out"
-            >
-              {link.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <Nav variant="header" />
       <div className="hidden md:flex items-center justify-between w-43.25 lg:w-44 2xl:w-50">
         <Link
           href="/auth/register/"

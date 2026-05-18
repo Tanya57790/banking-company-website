@@ -1,7 +1,6 @@
 "use client";
 
-import Link from "next/link";
-import { navLinks, login } from "./data";
+import { Nav } from "@/components/Nav";
 
 type MobileMenuProps = {
   handler: () => void;
@@ -32,31 +31,7 @@ const MobileMenu = ({ handler, isOpen }: MobileMenuProps) => {
         >
           X
         </button>
-        <ul className="flex flex-col w-full pt-18 pl-10.5">
-          {navLinks.map((link) => (
-            <li key={link.id}>
-              <Link
-                href={link.href}
-                className="flex w-19.5 h-10.25 font-lexend text-sm text-white-absolute hover:bg-grey-150 hover:rounded-[82px] transition-all duration-200 ease-in-out pb-3.75"
-              >
-                {link.name}
-              </Link>
-            </li>
-          ))}
-          <li>
-            <Link
-              href="/auth/register/"
-              className="flex items-center justify-center font-lexend text-sm text-white-absolute w-21.75 h-10.25 mb-2.75 bg-grey-200 rounded-[82px] hover:bg-grey-150 transition-all duration-200 ease-in-out"
-            >
-              Sign Up
-            </Link>
-          </li>
-          <li>
-            <Link href={login.href} className={login.className}>
-              {login.name}
-            </Link>
-          </li>
-        </ul>
+        <Nav variant="mobileMenu" isMobileMenu />
       </div>
     </>
   );
