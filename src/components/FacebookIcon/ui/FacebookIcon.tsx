@@ -11,7 +11,6 @@ const FacebookIcon = ({ variant }: IconProps) => {
     <svg
       role="img"
       aria-label="Facebook Provider"
-      aria-hidden="true"
       width="30"
       height="30"
       viewBox="0 0 30 30"
