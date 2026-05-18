@@ -31,7 +31,7 @@ const Nav = ({ variant, isMobileMenu }: NavProps) => {
             href={link.href}
             className={`flex items-center font-lexend text-sm 2xl:text-lg text-white-absolute transition-all duration-200 ease-in-out  ${
               variant === "header"
-                ? "justify-center md:h-10.25 2xl:h-12.75 mx-0.75 xl:mx-1.5 2xl:mx-1.75 md:px-2.5 lg:px-4.5 2xl:px-5 md:hover:bg-grey-150 hover:rounded-[82px]"
+                ? "justify-center md:h-10.25 2xl:h-12.75 mx-0.75 xl:mx-1.5 2xl:mx-1.75 md:px-2.5 lg:px-4.5 2xl:px-5 md:hover:bg-grey-150 rounded-[82px]"
                 : ""
             } ${
               variant === "footer"
@@ -52,7 +52,7 @@ const Nav = ({ variant, isMobileMenu }: NavProps) => {
           <li>
             <Link
               href="/auth/register/"
-              className="flex items-center justify-center font-lexend text-sm text-white-absolute w-21.75 h-10.25 mb-2.75 bg-grey-200 rounded-[82px] hover:bg-grey-150 transition-all duration-200 ease-in-out"
+              className="flex items-center justify-center font-lexend text-sm text-white-absolute w-21.75 h-10.25 mb-2.75 bg-grey-200 hover:bg-grey-150 transition-all duration-200 ease-in-out rounded-[82px]"
             >
               Sign Up
             </Link>
