@@ -26,10 +26,13 @@ const Menu = ({ handler }: MenuProps) => {
         </Link>
       </div>
       <button
-        className="flex justify-center items-center md:hidden w-14 h-10 bg-primary-600 hover:bg-primary-800 active:bg-primary-600 transition-all duration-200 ease-in-out rounded-[82px]"
+        type="button"
         onClick={handler}
+        aria-label="Open menu"
+        className="flex justify-center items-center md:hidden w-14 h-10 bg-primary-600 hover:bg-primary-800 active:bg-primary-600 transition-all duration-200 ease-in-out rounded-[82px]"
       >
         <svg
+          aria-hidden="true"
           width="22"
           height="15"
           viewBox="0 0 22 15"
