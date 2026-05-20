@@ -12,10 +12,10 @@ interface SlideButtonProps {
 
 const SlideButton = ({ variantButton, isDesktop }: SlideButtonProps) => {
   const swiper = useSwiper();
-  const arrow = variantButton === "prev" ? "Left" : "Right";
 
   return (
     <button
+      type="button"
       aria-label={variantButton === "prev" ? "Previous slide" : "Next slide"}
       onClick={() =>
         variantButton === "prev" ? swiper.slidePrev() : swiper.slideNext()
@@ -28,9 +28,8 @@ const SlideButton = ({ variantButton, isDesktop }: SlideButtonProps) => {
       w-13 h-13 xl:w-15.5 xl:h-15.5 bg-grey-150 rounded-[100px] z-20! transition-all duration-200 ease-in-out`}
     >
       <svg
-        role="img"
-        aria-label={`Arrow ${arrow}`}
         aria-hidden="true"
+        focusable="false"
         width="17"
         height="16"
         viewBox="0 0 17 16"
