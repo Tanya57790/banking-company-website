@@ -5,7 +5,7 @@ import { useTogglePassword, useRegisterForm } from "@/hooks";
 import { InferSchema } from "@/lib/schema";
 import { EyePassword } from "@/components/EyePassword";
 import { AuthButtons } from "@/components/AuthButtons";
-import { login } from "@/components/Menu/ui/data";
+import { login } from "@/components/Nav/ui/data";
 import { inputs } from "./data";
 
 const Form = () => {
@@ -36,6 +36,7 @@ const Form = () => {
             return (
               <p key={input.id} className="relative flex flex-col pb-6 sm:pb-0">
                 <input
+                  id={`${input.id}-${input.type}-input`}
                   type={input.name === "password" ? inputType : input.type}
                   {...register(`${input.name as keyof InferSchema}`)}
                   placeholder={input.placeholder}
