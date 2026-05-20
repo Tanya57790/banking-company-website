@@ -7,11 +7,16 @@ export interface EyePasswordProps {
 
 const EyePassword = ({ onClick, isOpenEye }: EyePasswordProps) => {
   return (
-    <span
+    <button
+      type="button"
       onClick={onClick}
+      aria-expanded={isOpenEye}
+      aria-controls="4-password-input"
+      aria-label="Toggle password visibility"
       className="absolute top-4.5 right-0 mt-1.5 2xl:mt-3 mr-4 xl:mr-5 2xl:mr-6 cursor-pointer"
     >
       <svg
+        aria-hidden="true"
         width="18"
         height="14"
         viewBox="0 0 18 14"
@@ -30,6 +35,7 @@ const EyePassword = ({ onClick, isOpenEye }: EyePasswordProps) => {
         />
       </svg>
       <svg
+        aria-hidden="true"
         width="20"
         height="20"
         className={`absolute -top-1 -left-0.5 ${
@@ -50,7 +56,7 @@ const EyePassword = ({ onClick, isOpenEye }: EyePasswordProps) => {
           y2="20"
         />
       </svg>
-    </span>
+    </button>
   );
 };
 
