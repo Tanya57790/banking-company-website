@@ -3,8 +3,7 @@
 const AppleIcon = () => {
   return (
     <svg
-      role="img"
-      aria-label="Apple Provider"
+      aria-hidden="true"
       width="24"
       height="28"
       viewBox="0 0 24 28"

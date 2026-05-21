@@ -9,8 +9,7 @@ interface IconProps {
 const FacebookIcon = ({ variant }: IconProps) => {
   return (
     <svg
-      role="img"
-      aria-label="Facebook Provider"
+      aria-hidden="true"
       width="30"
       height="30"
       viewBox="0 0 30 30"
