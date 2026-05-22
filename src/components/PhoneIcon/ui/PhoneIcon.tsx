@@ -1,5 +1,3 @@
-"use client";
-
 const PhoneIcon = () => {
   return (
     <svg

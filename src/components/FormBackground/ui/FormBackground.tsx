@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import abstractImage from "@/assets/images/abstract-register_d.png";
 import bgImage from "@/assets/images/form-background.webp";

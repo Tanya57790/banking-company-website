@@ -1,5 +1,3 @@
-"use client";
-
 const EmailIcon = () => {
   return (
     <svg

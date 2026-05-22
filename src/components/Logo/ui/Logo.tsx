@@ -1,5 +1,3 @@
-"use client";
-
 type Variant = "header" | "footer";
 
 interface IconProps {

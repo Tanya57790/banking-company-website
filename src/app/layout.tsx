@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import "./global.css";
 
 const lexend = Lexend({
@@ -19,8 +21,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${lexend.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html
+      lang="en"
+      className={`${lexend.variable} h-full bg-secondary-105 antialiased`}
+    >
+      <body className="relative px-6 md:px-14 xl:px-20 2xl:px-40.5 min-h-[100vh] flex flex-col">
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

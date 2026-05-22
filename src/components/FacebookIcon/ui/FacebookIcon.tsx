@@ -1,5 +1,3 @@
-"use client";
-
 type Variant = "form" | "footer";
 
 interface IconProps {
