@@ -25,7 +25,7 @@ export default function RootLayout({
       lang="en"
       className={`${lexend.variable} h-full bg-secondary-105 antialiased`}
     >
-      <body className="relative px-6 md:px-14 xl:px-20 2xl:px-40.5 min-h-screen flex flex-col">
+      <body className="relative px-4 md:px-14 xl:px-20 2xl:px-40.5 min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
