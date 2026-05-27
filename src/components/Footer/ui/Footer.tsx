@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="absolute h-[stretch] w-full bg-grey-110 -mx-6 md:-mx-14 xl:-mx-20 2xl:-mx-40.5 -z-10" />
-      <div className="relative m-auto h-125.75 xl:h-110 2xl:h-144.5 pt-12.5 pb-7.5 xl:pt-15 2xl:pt-25 2xl:pb-12.5">
+      <div className="relative m-auto h-125.75 md:h-110 2xl:h-144.5 pt-12.5 pb-7.5 xl:pt-15 2xl:pt-25 2xl:pb-12.5">
         <div className="flex flex-wrap items-center justify-center flex-col">
           <Logo variant="footer" />
           <Nav variant="footer" />
