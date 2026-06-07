@@ -7,7 +7,7 @@ const ArrowsIcon = () => {
       viewBox="0 0 10 10"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="fill-grey-110 w-3.25 h-3.25 xl:w-4.25 xl:h-4.25 2xl:w-5.25 2xl:h-5.25"
+      className="fill-grey-110 size-2.5 xl:size-3.25 2xl:size-4.25"
     >
       <path
         fillRule="evenodd"
