@@ -3,9 +3,6 @@ import { ArrowsIcon } from "@/components/ArrowsIcon";
 const HeroTransactions = () => {
   return (
     <div className="relative flex flex-col items-center z-10">
-      <div className="absolute inset-0 pointer-events-none z-10">
-        <div className="absolute inset-0 bottom-0 w-full bg-linear-to-t from-secondary-105 to-transparent" />
-      </div>
       <div className="relative top-0 flex justify-between items-center w-66.25 h-11.5 xl:w-88.75 xl:h-15.5 2xl:w-111.5 2xl:h-19.25 px-3.25 py-2 xl:px-4.25 xl:py-2.75 2xl:px-5.25 2xl:py-3.5 rounded-md xl:rounded-lg 2xl:rounded-[10px] bg-grey-110">
         <div className="flex items-center justify-center">
           <div className="flex items-center justify-center bg-primary-600 size-5.75 p-1.25 xl:p-1.75 2xl:p-2.25 xl:size-7.5 2xl:size-9.5 rounded-[28px] xl:rounded-[37px] 2xl:rounded-[46px]">
@@ -24,7 +21,7 @@ const HeroTransactions = () => {
           -$68.00
         </span>
       </div>
-      <div className="relative -top-3.75 xl:-top-5 2xl:-top-6.25 -z-10 flex justify-between items-center w-61 h-11.5 xl:w-81.75 xl:h-15.5 2xl:w-102.75 2xl:h-19.25 px-3.25 py-2 xl:px-4.25 xl:py-2.75 2xl:px-5.25 2xl:py-3.5 rounded-md xl:rounded-lg 2xl:rounded-[10px] bg-grey-110 shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+      <div className="relative -top-3.75 xl:-top-5 2xl:-top-6.25 opacity-80 -z-10 flex justify-between items-center w-61 h-11.5 xl:w-81.75 xl:h-15.5 2xl:w-102.75 2xl:h-19.25 px-3.25 py-2 xl:px-4.25 xl:py-2.75 2xl:px-5.25 2xl:py-3.5 rounded-md xl:rounded-lg 2xl:rounded-[10px] bg-grey-110 shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
         <div className="flex items-center justify-center">
           <div className="flex items-center justify-center bg-primary-600 size-5.75 p-1.25 xl:p-1.75 2xl:p-2.25 xl:size-7.5 2xl:size-9.5 rounded-[28px] xl:rounded-[37px] 2xl:rounded-[46px]">
             <ArrowsIcon />
@@ -42,7 +39,7 @@ const HeroTransactions = () => {
           -$68.00
         </span>
       </div>
-      <div className="relative -top-7.5 xl:-top-10 2xl:-top-12.5 -z-20 flex justify-between items-center w-55.75 h-11.5 xl:w-75 xl:h-15.5 2xl:w-94 2xl:h-19.25 px-3.25 py-2 xl:px-4.25 xl:py-2.75 2xl:px-5.25 2xl:py-3.5 rounded-md xl:rounded-lg 2xl:rounded-[10px] bg-grey-110 shadow-[0_4px_4px_rgba(0,0,0,0.40)]">
+      <div className="relative -top-7.5 xl:-top-10 2xl:-top-12.5 opacity-40 -z-20 flex justify-between items-center w-55.75 h-11.5 xl:w-75 xl:h-15.5 2xl:w-94 2xl:h-19.25 px-3.25 py-2 xl:px-4.25 xl:py-2.75 2xl:px-5.25 2xl:py-3.5 rounded-md xl:rounded-lg 2xl:rounded-[10px] bg-grey-110 shadow-[0_4px_4px_rgba(0,0,0,0.40)]">
         <div className="flex items-center justify-center">
           <div className="flex items-center justify-center bg-primary-600 size-5.75 p-1.25 xl:p-1.75 2xl:p-2.25 xl:size-7.5 2xl:size-9.5 rounded-[28px] xl:rounded-[37px] 2xl:rounded-[46px]">
             <ArrowsIcon />
