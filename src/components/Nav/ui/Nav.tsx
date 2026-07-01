@@ -33,7 +33,7 @@ const Nav = ({ variant, isMobileMenu }: NavProps) => {
                 : ""
             } ${
               variant === "footer"
-                ? "justify-center mx-3.5 2xl:mx-6.5 hover:text-primary-600 active:text-primary-700"
+                ? "justify-center mx-2.5 xs:mx-3.5 2xl:mx-6.5 hover:text-primary-600 active:text-primary-700"
                 : ""
             } ${
               variant === "mobileMenu"
