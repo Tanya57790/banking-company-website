@@ -28,7 +28,7 @@ const MobileMenu = ({ handler, isOpen }: MobileMenuProps) => {
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
           aria-label="Close menu"
-          className="absolute text-white-absolute right-6"
+          className="absolute cursor-pointer text-white-absolute right-6"
         >
           X
         </button>
