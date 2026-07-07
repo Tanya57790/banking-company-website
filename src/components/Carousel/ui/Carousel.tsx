@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Navigation } from "swiper/modules";
 import { SlideButton } from "@/components/SlideButton";
-import { QuotationMark } from "@/components/QuotationMark";
+import { QuotationMark } from "@/shared/icons/QuotationMark";
 import { individualsSlides, businessesSlides } from "./data";
 import { breakpoints, accessibility, keyboard } from "./swiper";
 

@@ -1,4 +1,4 @@
-import { ArrowsIcon } from "@/components/ArrowsIcon";
+import { ArrowsIcon } from "@/shared/icons/ArrowsIcon";
 
 const HeroTransactions = () => {
   return (

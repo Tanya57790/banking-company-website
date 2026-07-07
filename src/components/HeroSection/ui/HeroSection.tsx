@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { CheckMarkIcon } from "@/components/CheckMarkIcon";
+import { CheckMarkIcon } from "@/shared/icons/CheckMarkIcon";
 import { TransactionsCard } from "@/components/TransactionsCard";
-import { USDIcon } from "@/components/USDIcon";
-import { EURIcon } from "@/components/EURIcon";
-import { BTCIcon } from "@/components/BTCIcon";
-import { ETHIcon } from "@/components/ETHIcon";
+import { USDIcon } from "@/shared/icons/USDIcon";
+import { EURIcon } from "@/shared/icons/EURIcon";
+import { BTCIcon } from "@/shared/icons/BTCIcon";
+import { ETHIcon } from "@/shared/icons/ETHIcon";
 
 const HeroSection = () => {
   return (

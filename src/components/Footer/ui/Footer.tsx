@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { Logo } from "@/components/Logo";
+import { Logo } from "@/shared/icons/Logo";
 import { Nav } from "@/components/Nav";
-import { EmailIcon } from "@/components/EmailIcon";
-import { PhoneIcon } from "@/components/PhoneIcon";
-import { MarkIcon } from "@/components/MarkIcon";
-import { FacebookIcon } from "@/components/FacebookIcon";
-import { XIcon } from "@/components/XIcon";
-import { InstagramIcon } from "@/components/InstagramIcon";
+import { EmailIcon } from "@/shared/icons/EmailIcon";
+import { PhoneIcon } from "@/shared/icons/PhoneIcon";
+import { MarkIcon } from "@/shared/icons/MarkIcon";
+import { FacebookIcon } from "@/shared/icons/FacebookIcon";
+import { XIcon } from "@/shared/icons/XIcon";
+import { InstagramIcon } from "@/shared/icons/InstagramIcon";
 
 const Footer = () => {
   return (

@@ -4,9 +4,9 @@ import {
   getSocialHandler,
   type ProviderVariant,
 } from "@/utils/getSocialHandler";
-import { GoogleIcon } from "@/components/GoogleIcon";
-import { FacebookIcon } from "@/components/FacebookIcon";
-import { AppleIcon } from "@/components/AppleIcon";
+import { GoogleIcon } from "@/shared/icons/GoogleIcon";
+import { FacebookIcon } from "@/shared/icons/FacebookIcon";
+import { AppleIcon } from "@/shared/icons/AppleIcon";
 import { containerClass, buttonClass } from "./data";
 
 interface AuthButtonProps {

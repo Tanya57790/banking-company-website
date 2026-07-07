@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { FlagIcon } from "@/components/FlagIcon";
+import { FlagIcon } from "@/shared/icons/FlagIcon";
 import { HeroTransactions } from "@/components/HeroTransactions";
-import { PlusIcon } from "@/components/PlusIcon";
+import { PlusIcon } from "@/shared/icons/PlusIcon";
 import { CornersGlow } from "@/components/CornersGlow";
 import abstract from "@/assets/images/abstract-bg.png";
 import abstractArrow from "@/assets/images/arrow-home_d.png";

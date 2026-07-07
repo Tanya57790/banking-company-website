@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Logo } from "@/components/Logo";
+import { Logo } from "@/shared/icons/Logo";
 import { Nav } from "@/components/Nav";
 import { login } from "@/components/Nav/ui/data";
 
