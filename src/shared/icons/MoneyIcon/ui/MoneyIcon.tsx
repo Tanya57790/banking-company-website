@@ -1,4 +1,11 @@
-const MoneyIcon = () => {
+interface SizeIconProps {
+  size?: {
+    mobile: number;
+    desktop: number;
+  };
+}
+
+const MoneyIcon = ({ size }: SizeIconProps) => {
   return (
     <svg
       aria-hidden="true"
@@ -7,7 +14,7 @@ const MoneyIcon = () => {
       viewBox="0 0 28 28"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-7 h-7 2xl:w-8.5 2xl:h-8.5"
+      className={`w-${size?.mobile} h-${size?.mobile} 2xl:w-${size?.desktop} 2xl:h-${size?.desktop}`}
     >
       <path
         d="M14 8.75C12.5503 8.75 11.375 9.92525 11.375 11.375C11.375 12.8247 12.5503 14 14 14C15.4497 14 16.625 12.8247 16.625 11.375C16.625 9.92525 15.4497 8.75 14 8.75Z"
