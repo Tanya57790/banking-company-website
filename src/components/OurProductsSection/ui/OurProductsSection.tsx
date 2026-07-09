@@ -11,9 +11,9 @@ const OurProducts = () => {
     <div className="m-auto xs:w-89.5 sm:w-141 md:w-155 lg:w-auto mt-[69.37px] md:mt-[120.73px] 2xl:mt-[150.52px]">
       <div className="flex flex-col items-center justify-center lg:items-end lg:justify-between lg:flex-row lg:pr-1.5">
         <div className="text-center lg:text-left pb-5 lg:pb-0 lg:w-153.25 xl:w-205.25">
-          <h1 className="font-lexend font-medium text-[28px] 2xl:text-[38px] text-white-absolute pb-2.5">
+          <h2 className="font-lexend font-medium text-[28px] 2xl:text-[38px] text-white-absolute pb-2.5">
             Our <span className="text-primary-600">Products</span>
-          </h1>
+          </h2>
           <p className="font-light font-lexend text-sm xl:text-[16px] 2xl:text-lg text-grey-750">
             Discover a range of comprehensive and customizable banking products
             at YourBank, designed to suit your unique financial needs and
@@ -54,9 +54,9 @@ const OurProducts = () => {
                 <ProductIcon variant={product.icon} />
               </div>
             </div>
-            <h2 className="font-lexend text-center text-white-absolute text-[20px] 2xl:text-[24px] pt-5 md:pt-6 2xl:pt-7.5">
+            <h3 className="font-lexend text-center text-white-absolute text-[20px] 2xl:text-[24px] pt-5 md:pt-6 2xl:pt-7.5">
               {product.title}
-            </h2>
+            </h3>
             <p className="font-lexend font-light text-center text-grey-750 text-sm xl:text-[16px] desktop:text-lg pt-3 md:pt-4 2xl:pt-5">
               {product.text}
             </p>
