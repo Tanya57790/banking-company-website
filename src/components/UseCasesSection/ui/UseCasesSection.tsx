@@ -7,7 +7,7 @@ const UseCasesSection = () => {
     <div className="m-auto xs:w-89.5 sm:w-141 md:w-155 lg:w-auto mt-20 ">
       <div className="flex flex-col items-center justify-center lg:items-end lg:justify-between lg:flex-row lg:pr-1.5">
         <section className="text-center lg:text-left lg:w-full">
-          <h2 className="font-lexend font-medium text-[28px] 2xl:text-[38px] text-primary-600 pb-2.5">
+          <h2 className="font-lexend font-medium text-[28px] xl:text-[38px] 2xl:text-[48px] text-primary-600 pb-2.5">
             Use Cases
           </h2>
           <p className="font-light font-lexend text-sm xl:text-[16px] 2xl:text-lg text-grey-750">
