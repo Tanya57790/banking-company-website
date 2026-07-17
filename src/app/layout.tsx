@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import "./global.css";
 
 const lexend = Lexend({
   variable: "--font-lexend",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
 });
@@ -23,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${lexend.variable} h-full bg-secondary-105 antialiased`}
+      className={`${lexend.variable} ${inter.variable} h-full bg-secondary-105 antialiased`}
     >
       <body className="relative px-4 md:px-14 xl:px-20 2xl:px-40.5 min-h-screen flex flex-col">
         <Header />

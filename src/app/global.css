@@ -49,4 +49,5 @@
 
 @theme inline {
   --font-lexend: var(--font-lexend);
+  --font-inter: var(--font-inter);
 }
