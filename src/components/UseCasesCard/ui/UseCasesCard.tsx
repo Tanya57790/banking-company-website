@@ -45,7 +45,7 @@ const UseCasesCard = ({ variant }: UseCasesCardProps) => {
               <UseCasesIcon variant={icon.name} />
             </div>
           </div>
-          <span className="font-lexend text-center text-white-absolute text-sm xl:text-[16px] desktop:text-[20px] pt-3.5 2xl:pt-6">
+          <span className="font-lexend text-center text-white-absolute text-[11px] xs:text-sm xl:text-[16px] desktop:text-[20px] pt-3.5 2xl:pt-6">
             {icon.label}
           </span>
         </div>
