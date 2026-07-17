@@ -41,10 +41,10 @@ const OurFeaturesSection = () => {
           keyboard={keyboard}
           a11y={accessibility}
           wrapperClass="flex items-center w-min sm:gap-5 lg:w-auto lg:flex-col lg:justify-center lg:transform-none! 2xl:gap-7.5 2xl:w-52"
-          className="swiper overflow-hidden mt-12.5 w-full h-22.25 p-4 bg-grey-110 rounded-[10px] xs:p-5 sm:w-max md:overflow-visible lg:w-61.25 lg:h-auto lg:p-10 lg:mt-0 lg:mr-5 2xl:mr-7.5 2xl:p-12.5 2xl:w-77"
+          className="swiper overflow-hidden mt-12.5 w-full h-22.25 p-4! bg-grey-110 rounded-[10px] xs:p-5! sm:w-max md:overflow-visible! lg:w-61.25 lg:h-auto lg:p-10! lg:mt-0 lg:mr-5! 2xl:mr-7.5! 2xl:p-12.5! 2xl:w-77"
         >
           {slides.map((slide) => (
-            <SwiperSlide key={slide.id}>
+            <SwiperSlide key={slide.id} className="w-auto!">
               <button
                 type="button"
                 onClick={() => setActive(`${slide.active}`)}
