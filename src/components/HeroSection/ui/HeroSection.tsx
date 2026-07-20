@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { CheckMarkIcon } from "@/shared/icons/CheckMarkIcon";
+import { AccountButton } from "@/components/AccountButton";
 import { TransactionsCard } from "@/components/TransactionsCard";
 import { USDIcon } from "@/shared/icons/USDIcon";
 import { EURIcon } from "@/shared/icons/EURIcon";
@@ -30,12 +30,7 @@ const HeroSection = () => {
             innovative services that prioritize our customers&apos; needs.
           </p>
         </section>
-        <Link
-          href="#"
-          className="block font-lexend text-[14px] px-6 py-3.5 mb-20 w-36 h-12.25 bg-primary-600 rounded-[82px] hover:bg-primary-700 active:bg-primary-600 transition-all duration-200 ease-in-out 2xl:text-lg md:mb-0 2xl:px-7.5 2xl:py-4.5 2xl:w-45.75 2xl:h-15.75"
-        >
-          Open Account
-        </Link>
+        <AccountButton margin="mb-20 md:mb-0" />
       </div>
       <div>
         <TransactionsCard />
