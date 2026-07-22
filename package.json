@@ -7,7 +7,7 @@
     "clean": "pnpm store prune && pnpm rm -rf .next",
     "analyzer": "pnpm dlx cross-env ANALYZE=true pnpm build",
     "build:start": "pnpm run build && pnpm start",
-    "build": "prisma generate && next build --webpack",
+    "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint",
     "test": "vitest"
