@@ -93,3 +93,4 @@ model Verification {
 
   @@index([identifier(length: 191)])
   @@map("verification")
+}
