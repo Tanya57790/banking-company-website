@@ -54,6 +54,7 @@ const Carousel = () => {
       </div>
       <div className="swiper-container">
         <Swiper
+          data-testid="carousel"
           modules={[A11y, Navigation]}
           breakpoints={breakpoints}
           keyboard={keyboard}
@@ -84,7 +85,10 @@ const Carousel = () => {
             </SwiperSlide>
           ))}
           <SlideButton variantButton="next" isDesktop />
-          <div className="flex md:hidden justify-center w-full">
+          <div
+            data-testid="mobile-controls"
+            className="flex md:hidden justify-center w-full"
+          >
             <div className="flex relative justify-between h-11 w-31 xl:h-15.5 sm:w-37 xl:w-40 mt-6.5 sm:mt-7.5">
               <SlideButton variantButton="prev" />
               <SlideButton variantButton="next" />
