@@ -7,9 +7,10 @@ import { login } from "@/components/Nav/ui/data";
 
 type MenuProps = {
   handler: () => void;
+  isOpen: boolean;
 };
 
-const Menu = ({ handler }: MenuProps) => {
+const Menu = ({ handler, isOpen }: MenuProps) => {
   return (
     <>
       <Logo variant="header" />
@@ -28,6 +29,7 @@ const Menu = ({ handler }: MenuProps) => {
       <button
         type="button"
         onClick={handler}
+        aria-expanded={isOpen}
         aria-label="Open menu"
         className="flex justify-center items-center md:hidden cursor-pointer w-14 h-10 bg-primary-600 hover:bg-primary-800 active:bg-primary-600 transition-all duration-200 ease-in-out rounded-[82px]"
       >

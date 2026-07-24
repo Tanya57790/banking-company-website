@@ -21,7 +21,7 @@ const Header = () => {
         role="navigation"
         className="flex items-center justify-between py-3.5 pr-3.5 pl-6 mx-auto max-w-none w-full"
       >
-        <Menu handler={handler} />
+        <Menu handler={handler} isOpen={isOpen} />
         <MobileMenu handler={handler} isOpen={isOpen} />
       </nav>
     </header>
