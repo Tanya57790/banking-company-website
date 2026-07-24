@@ -46,6 +46,7 @@ const QuestionsSection = () => {
       <div className="relative flex justify-center w-full">
         <button
           type="button"
+          aria-expanded={isShow}
           onClick={() => setIsShow((prev) => !prev)}
           className="cursor-pointer flex items-center justify-center font-inter text-white-absolute text-sm bg-grey-110 rounded-[100px] w-38.75 h-12.25 2xl:text-lg 2xl:w-48.25 2xl:h-15.75"
         >
