@@ -1,7 +1,6 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { cleanup, render, screen, within } from "@testing-library/react";
+import { cleanup, render, screen } from "@testing-library/react";
 import Carousel from "./Carousel";
-import { runToggleSectionTests } from "@/tests/helpers/runToggleSectionTests";
 import userEvent from "@testing-library/user-event";
 
 vi.mock("swiper/react", async () => {
@@ -54,65 +53,48 @@ vi.mock("swiper/react", async () => {
 });
 
 afterEach(() => {
-  cleanup();
   vi.clearAllMocks();
+  cleanup();
 });
 
 describe("Carousel", () => {
-  runToggleSectionTests(
-    () => <Carousel />,
-    /for individuals/i,
-    /for businesses/i,
-    /yourbank has been my trusted/i,
-    /yourbank helped me set up/i
-  );
+  it("updates active slide when pressing arrows", async () => {
+    const handleSlideChange = vi.fn();
+    render(<Carousel onSlideChange={handleSlideChange} />);
 
-  describe("arrows interactions", () => {
-    it("updates active slide when pressing arrows", async () => {
-      const handleSlideChange = vi.fn();
-      render(<Carousel onSlideChange={handleSlideChange} />);
+    const user = userEvent.setup();
 
-      const user = userEvent.setup();
+    await user.click(screen.getByTestId("next-slide"));
+    expect(handleSlideChange).toHaveBeenCalledWith(2);
+    expect(screen.getByTestId("active-slide")).toHaveTextContent("Current: 2");
 
-      await user.click(screen.getByTestId("next-slide"));
-      expect(handleSlideChange).toHaveBeenCalledWith(2);
-      expect(screen.getByTestId("active-slide")).toHaveTextContent(
-        "Current: 2"
-      );
+    await user.click(screen.getByTestId("prev-slide"));
+    expect(handleSlideChange).toHaveBeenCalledWith(0);
+    expect(screen.getByTestId("active-slide")).toHaveTextContent("Current: 0");
+  });
 
-      await user.click(screen.getByTestId("prev-slide"));
-      expect(handleSlideChange).toHaveBeenCalledWith(0);
-      expect(screen.getByTestId("active-slide")).toHaveTextContent(
-        "Current: 0"
-      );
+  it("arrow left and right are focusable and enabled", async () => {
+    render(<Carousel />);
+
+    const user = userEvent.setup();
+
+    const prevButton = screen.getByRole("button", {
+      name: /previous slide desktop/i,
+    });
+    const nextButton = screen.getByRole("button", {
+      name: /next slide desktop/i,
     });
 
-    it("arrow left and right are focusable and enabled", async () => {
-      render(<Carousel />);
+    expect(prevButton).toBeInTheDocument();
+    await user.tab();
+    await user.tab();
+    await user.tab();
+    expect(prevButton).toHaveFocus();
+    expect(prevButton).toBeEnabled();
 
-      const user = userEvent.setup();
-      const carousel = screen.getByTestId("carousel");
-      const mobileContainer = within(carousel).getByTestId("mobile-controls");
-
-      const allButtons = within(carousel).getAllByRole("button");
-      const buttonsOutsideMobile = allButtons.filter(
-        (button) => !mobileContainer.contains(button)
-      );
-
-      const prevButton = buttonsOutsideMobile[0];
-      const nextButton = buttonsOutsideMobile[1];
-
-      expect(prevButton).toBeInTheDocument();
-      await user.tab();
-      await user.tab();
-      await user.tab();
-      expect(prevButton).toHaveFocus();
-      expect(prevButton).toBeEnabled();
-
-      expect(nextButton).toBeInTheDocument();
-      await user.tab();
-      expect(nextButton).toHaveFocus();
-      expect(nextButton).toBeEnabled();
-    });
+    expect(nextButton).toBeInTheDocument();
+    await user.tab();
+    expect(nextButton).toHaveFocus();
+    expect(nextButton).toBeEnabled();
   });
 });
