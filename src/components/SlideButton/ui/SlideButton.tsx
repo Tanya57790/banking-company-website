@@ -4,19 +4,35 @@ import { useSwiper } from "swiper/react";
 import { arrowLeft, arrowRight } from "./data";
 
 type VariantButton = "prev" | "next";
+type VariantTestId = "mobile" | "desktop";
 
 interface SlideButtonProps {
   variantButton: VariantButton;
   isDesktop?: boolean;
+  variantTestId: VariantTestId;
 }
 
-const SlideButton = ({ variantButton, isDesktop }: SlideButtonProps) => {
+const SlideButton = ({
+  variantButton,
+  variantTestId,
+  isDesktop,
+}: SlideButtonProps) => {
   const swiper = useSwiper();
 
   return (
     <button
       type="button"
-      aria-label={variantButton === "prev" ? "Previous slide" : "Next slide"}
+      aria-label={
+        variantButton === "prev" && variantTestId === "mobile"
+          ? "Previous Slide Mobile"
+          : variantButton === "prev" && variantTestId === "desktop"
+          ? "Previous Slide Desktop"
+          : variantButton === "next" && variantTestId === "mobile"
+          ? "Next Slide Mobile"
+          : variantButton === "next" && variantTestId === "desktop"
+          ? "Next Slide Desktop"
+          : ""
+      }
       onClick={() =>
         variantButton === "prev" ? swiper.slidePrev() : swiper.slideNext()
       }
