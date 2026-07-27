@@ -12,7 +12,12 @@ import "swiper/css";
 import "swiper/css/a11y";
 import "swiper/css/navigation";
 
-const Carousel = () => {
+const Carousel = ({
+  onSlideChange,
+}: {
+  onSlideChange?: (index: number) => void;
+}) => {
+  const [activeIndex, setActiveIndex] = useState(0);
   const [isToggle, setIsToggle] = useState<boolean>(true);
   const slides = isToggle ? individualsSlides : businessesSlides;
 
@@ -53,8 +58,15 @@ const Carousel = () => {
         </div>
       </div>
       <div className="swiper-container">
+        <span data-testid="active-slide" className="hidden">
+          Current: {activeIndex}
+        </span>
         <Swiper
           data-testid="carousel"
+          onSlideChange={(swiper) => {
+            setActiveIndex(swiper.activeIndex);
+            onSlideChange?.(swiper.activeIndex);
+          }}
           modules={[A11y, Navigation]}
           breakpoints={breakpoints}
           keyboard={keyboard}
