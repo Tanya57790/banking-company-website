@@ -9,7 +9,7 @@ interface UseCasesCardProps {
   variant: UseCasesCardVariant;
 }
 
-const UseCasesCard = ({ variant }: UseCasesCardProps) => {
+const CasesCard = ({ variant }: UseCasesCardProps) => {
   const icons = variant === "individuals" ? individualsIcons : businessIcons;
 
   return (
@@ -54,4 +54,4 @@ const UseCasesCard = ({ variant }: UseCasesCardProps) => {
   );
 };
 
-export default UseCasesCard;
+export default CasesCard;

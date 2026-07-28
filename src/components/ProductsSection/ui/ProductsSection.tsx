@@ -3,7 +3,7 @@ import { useState } from "react";
 import { ProductIcon } from "@/shared/icons/ProductIcon";
 import { individuals, businesses } from "./data";
 
-const OurProducts = () => {
+const ProductsSection = () => {
   const [isToggle, setIsToggle] = useState<boolean>(true);
   const products = isToggle ? individuals : businesses;
 
@@ -67,4 +67,4 @@ const OurProducts = () => {
   );
 };
 
-export default OurProducts;
+export default ProductsSection;

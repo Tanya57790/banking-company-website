@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { UseCasesCard } from "@/components/UseCasesCard";
+import { CasesCard } from "@/components/CasesCard";
 import { cases } from "./data";
 
-const UseCasesSection = () => {
+const CasesSection = () => {
   return (
     <div className="m-auto xs:w-89.5 sm:w-141 md:w-155 lg:w-auto mt-20 ">
       <div className="flex flex-col items-center justify-center lg:items-end lg:justify-between lg:flex-row lg:pr-1.5">
@@ -23,7 +23,7 @@ const UseCasesSection = () => {
               key={caseValue.id}
               className="grid mt-15 2xl:mt-20 xl:grid-cols-[1fr_1fr] xl:gap-15 2xl:gap-25"
             >
-              <UseCasesCard variant={caseValue.card} />
+              <CasesCard variant={caseValue.card} />
               <div
                 className={
                   caseValue.card === "individuals" ? "" : "xl:-order-1"
@@ -69,4 +69,4 @@ const UseCasesSection = () => {
   );
 };
 
-export default UseCasesSection;
+export default CasesSection;

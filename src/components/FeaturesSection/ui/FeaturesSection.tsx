@@ -9,7 +9,7 @@ import { breakpoints, accessibility, keyboard, slides } from "./swiper";
 
 type ActiveTab = "onlineBanking" | "financialTools" | "customerSupport";
 
-const OurFeaturesSection = () => {
+const FeaturesSection = () => {
   const [active, setActive] = useState<ActiveTab>("onlineBanking");
 
   const features =
@@ -82,4 +82,4 @@ const OurFeaturesSection = () => {
   );
 };
 
-export default OurFeaturesSection;
+export default FeaturesSection;

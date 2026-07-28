@@ -4,7 +4,7 @@ import { useState } from "react";
 import { ArrowBottomIcon } from "@/shared/icons/ArrowBottomIcon";
 import { questions } from "./data";
 
-const QuestionsSection = () => {
+const FAQSection = () => {
   const [isShow, setIsShow] = useState<boolean>(false);
   return (
     <div className="m-auto w-[288px] xs:w-89.5 lg:w-226.5 xl:w-278.5 2xl:w-301.5 desktop:w-[1590px] md:w-155 mt-[69.37px] md:mt-[120.73px] 2xl:mt-[150.52px]">
@@ -64,4 +64,4 @@ const QuestionsSection = () => {
   );
 };
 
-export default QuestionsSection;
+export default FAQSection;

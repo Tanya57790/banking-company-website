@@ -1,15 +1,15 @@
 import { afterEach, describe } from "vitest";
 import { cleanup } from "@testing-library/react";
-import OurProductsSection from "./OurProductsSection";
+import ProductsSection from "./ProductsSection";
 import { runToggleSectionTests } from "@/tests/helpers/runToggleSectionTests";
 
 afterEach(() => {
   cleanup();
 });
 
-describe("OurProductsSection", () => {
+describe("ProductsSection", () => {
   runToggleSectionTests(
-    () => <OurProductsSection />,
+    () => <ProductsSection />,
     /for individuals/i,
     /for businesses/i,
     /enjoy easy and convenient/i,

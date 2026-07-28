@@ -1,7 +1,7 @@
 import { afterEach, describe, beforeEach, it, expect } from "vitest";
 import { cleanup, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import OurFeaturesSection from "./OurFeaturesSection";
+import FeaturesSection from "./FeaturesSection";
 
 afterEach(() => {
   cleanup();
@@ -9,7 +9,7 @@ afterEach(() => {
 
 describe("button enabled, focusable, and text changes on click", () => {
   beforeEach(() => {
-    render(<OurFeaturesSection />);
+    render(<FeaturesSection />);
   });
 
   it("first button is focusable and enabled", async () => {
