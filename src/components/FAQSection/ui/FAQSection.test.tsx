@@ -1,7 +1,7 @@
 import { afterEach, describe, beforeEach, it, expect } from "vitest";
 import { cleanup, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import QuestionsSection from "./QuestionsSection";
+import FAQSection from "./FAQSection";
 
 afterEach(() => {
   cleanup();
@@ -9,7 +9,7 @@ afterEach(() => {
 
 describe("FAQ interactions", () => {
   beforeEach(() => {
-    render(<QuestionsSection />);
+    render(<FAQSection />);
   });
 
   it("button enabled and focusable", async () => {
