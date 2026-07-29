@@ -10,8 +10,8 @@
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint",
-    "test": "vitest",
-    "e2e:test": "pnpm exec playwright test --project=chromium"
+    "test:unit": "vitest",
+    "test:e2e": "pnpm exec playwright test --project=chromium"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.4.0",
