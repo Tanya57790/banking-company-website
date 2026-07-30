@@ -37,6 +37,9 @@ jobs:
       - name: Run linter
         run: pnpm lint
 
+      - name: Run type checks
+        run: pnpm exec tsc -p tsconfig.json --noEmit
+
       - name: Run tests
         run: pnpm test:unit -- --ci --coverage
 
@@ -92,6 +95,9 @@ jobs:
 
       - name: Wait for app
         run: pnpm exec wait-on http://localhost:3000
+
+      - name: Run type checks
+        run: pnpm exec tsc -p tsconfig.json --noEmit
 
       - name: Run Playwright tests
         run: pnpm exec playwright test
