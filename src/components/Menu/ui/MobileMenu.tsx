@@ -1,15 +1,21 @@
 "use client";
 
+import { useMediaQuery } from "@/hooks";
 import { useEffect, useState } from "react";
 import { Nav } from "@/components/Nav";
 import { Logo } from "@/shared/icons/Logo";
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const isDesktop = useMediaQuery("(min-width: 768px)");
 
   const handler = () => {
     setIsOpen((prev) => !prev);
   };
+
+  if (isDesktop && isOpen) {
+    setIsOpen(false);
+  }
 
   useEffect(() => {
     document.body.classList.toggle("overflow-hidden", isOpen);
