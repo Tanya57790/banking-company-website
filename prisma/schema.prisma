@@ -18,16 +18,17 @@ enum Role {
 }
 
 model User { 
-  id                    String    @id @default(uuid())
+  id                    String    @id
+  name                  String
   firstName             String
   lastName              String
   email                 String    @unique
   emailVerified         Boolean   @default(false)
-  password              String    //  password  String // bcrypt hash
+  password              String?    //  password  String // bcrypt hash
   passwordResetToken    String?   @unique
   passwordResetExpires  DateTime?
-  balance               Float     @default(0)
-  role                  Role      @default(USER)
+  balance               Float?     @default(0)
+  role                  Role?      @default(USER)
   createdAt             DateTime  @default(now())
   image                 String?   @db.Text
   updatedAt             DateTime  @updatedAt
@@ -36,11 +37,11 @@ model User {
   accounts      Account[]
   transactions  Transaction[]
 
-  @@map("users")
+  @@map("user")
 }
 
 model Transaction {
-  id     String @id @default(uuid())
+  id     String @id 
   userId String
   amount Float
   type   String // deposit/withdraw
@@ -79,12 +80,12 @@ model Account {
   createdAt             DateTime  @default(now())
   updatedAt             DateTime  @updatedAt
 
-  @@index([userId(length: 191)])
+  @@index([userId(length: 191)], name: "custom_account_userId_idx")
   @@map("account")
 }
 
 model Verification {
-  id         String   @id
+  id         String   @id 
   identifier String   @db.Text
   value      String   @db.Text
   expiresAt  DateTime
