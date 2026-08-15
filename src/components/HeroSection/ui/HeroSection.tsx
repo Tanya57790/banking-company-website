@@ -1,3 +1,5 @@
+"use client";
+
 import { CheckMarkIcon } from "@/shared/icons/CheckMarkIcon";
 import { AccountButton } from "@/components/AccountButton";
 import { TransactionsCard } from "@/components/TransactionsCard";
@@ -5,8 +7,11 @@ import { USDIcon } from "@/shared/icons/USDIcon";
 import { EURIcon } from "@/shared/icons/EURIcon";
 import { BTCIcon } from "@/shared/icons/BTCIcon";
 import { ETHIcon } from "@/shared/icons/ETHIcon";
+import { authClient } from "@/lib/auth-client";
 
 const HeroSection = () => {
+  const { data: session } = authClient.useSession();
+
   return (
     <div className="flex flex-col items-center pt-12.5 md:items-baseline md:flex-row md:justify-between xl:pt-22.5 2xl:pt-38.25">
       <div className="flex flex-col items-center h-auto md:items-baseline sm:w-124.5 md:w-auto md:pr-5 lg:w-142.5 xl:w-162.5 desktop:w-200">
@@ -30,7 +35,7 @@ const HeroSection = () => {
             innovative services that prioritize our customers&apos; needs.
           </p>
         </section>
-        <AccountButton margin="mb-20 md:mb-0" />
+        <AccountButton session={session} margin="mb-20 md:mb-0" />
       </div>
       <div>
         <TransactionsCard />

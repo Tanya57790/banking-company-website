@@ -1,9 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import { AccountButton } from "@/components/AccountButton";
 import abstract from "@/assets/images/abstract-home-4_d.png";
 import abstractBg from "@/assets/images/abstract-home-bg.png";
+import { authClient } from "@/lib/auth-client";
 
 const CTASection = () => {
+  const { data: session } = authClient.useSession();
+
   return (
     <div className="relative m-auto h-auto w-full bg-grey-110 border border-grey-150 rounded-[20px] p-7.5 xs:w-89.5 md:w-140 md:p-9 lg:w-full lg:p-15 2xl:p-20">
       <div className="absolute inset-0 z-1 bg-grey-110 rounded-[20px] h-full w-full xl:w-102.75 2xl:w-[585.2px]" />
@@ -36,7 +41,7 @@ const CTASection = () => {
             Nascetur viverra arcu sed amet cursus purus.
           </p>
         </section>
-        <AccountButton />
+        <AccountButton session={session} />
       </div>
     </div>
   );
