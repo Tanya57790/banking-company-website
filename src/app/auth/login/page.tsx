@@ -2,7 +2,7 @@ import { FormBackground } from "@/components/FormBackground";
 import { LoginForm } from "@/forms/LoginForm";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 
-export const Login = () => {
+const Login = () => {
   return (
     <div>
       <FormBackground>

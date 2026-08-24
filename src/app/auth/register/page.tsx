@@ -2,7 +2,7 @@ import { FormBackground } from "@/components/FormBackground";
 import { RegisterForm } from "@/forms/RegisterForm";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 
-export const Register = () => {
+const Register = () => {
   return (
     <div>
       <FormBackground>
