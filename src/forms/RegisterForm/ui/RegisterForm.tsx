@@ -10,8 +10,8 @@ import { inputs } from "./data";
 
 const Form = () => {
   const { isOpenEye, inputType, togglePassword } = useTogglePassword();
-  const { signUpReg, onSubmitSignUp } = useRegisterForm();
-  const { register } = signUpReg;
+  const { register, errors, isSubmitting, handleSubmit, onSubmitSignUp } =
+    useRegisterForm();
 
   return (
     <div>
@@ -25,14 +25,14 @@ const Form = () => {
         </p>
       </div>
       <form
-        onSubmit={signUpReg.handleSubmit(onSubmitSignUp)}
+        onSubmit={handleSubmit(onSubmitSignUp)}
         method="POST"
         className="relative w-full lg:w-166 2xl:w-256.5 m-auto z-2"
       >
         <div className="sm:grid sm:grid-cols-[1fr_1fr] sm:gap-[30px_24px] sm:justify-items-center">
           {inputs.map((input) => {
             const fieldName = input.name as keyof SignUpSchema;
-            const error = signUpReg.errors[fieldName];
+            const error = errors[fieldName];
 
             return (
               <p key={input.id} className="relative flex flex-col pb-6 sm:pb-0">
@@ -61,7 +61,7 @@ const Form = () => {
             <input
               type="submit"
               className="flex justify-center items-center font-lexend text-sm 2xl:text-lg w-full h-10 sm:h-12.25 xl:w-101 xl:h-12.25 2xl:w-129.5 2xl:h-15.75 mt-6 mb-6 xl:mt-7.5 2xl:mt-10 bg-primary-600 cursor-pointer hover:bg-primary-800 active:bg-primary-600 transition-all duration-200 ease-in-out rounded-[82px]"
-              value={signUpReg.isSubmitting ? "Submitting..." : "Sign Up"}
+              value={isSubmitting ? "Submitting..." : "Sign Up"}
             />
             <Link
               href={login.href}
