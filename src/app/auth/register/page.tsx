@@ -2,7 +2,7 @@ import { FormBackground } from "@/components/FormBackground";
 import { RegisterForm } from "@/forms/RegisterForm";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 
-const Register = () => {
+export default function Register() {
   return (
     <div>
       <FormBackground>
@@ -11,6 +11,4 @@ const Register = () => {
       <TestimonialsSection />
     </div>
   );
-};
-
-export default Register;
+}

@@ -1,12 +1,10 @@
 import { ResetPasswordForm } from "@/forms/ResetPasswordForm";
 import { FormBackground } from "@/components/FormBackground";
 
-const ResetPassword = () => {
+export default function ResetPassword() {
   return (
     <FormBackground>
       <ResetPasswordForm />
     </FormBackground>
   );
-};
-
-export default ResetPassword;
+}

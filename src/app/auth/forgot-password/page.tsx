@@ -1,12 +1,10 @@
 import { ForgotPasswordForm } from "@/forms/ForgotPasswordForm";
 import { FormBackground } from "@/components/FormBackground";
 
-const ForgotPassword = () => {
+export default function ForgotPassword() {
   return (
     <FormBackground>
       <ForgotPasswordForm />
     </FormBackground>
   );
-};
-
-export default ForgotPassword;
+}

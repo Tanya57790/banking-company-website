@@ -2,7 +2,7 @@ import { FormBackground } from "@/components/FormBackground";
 import { LoginForm } from "@/forms/LoginForm";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 
-const Login = () => {
+export default function Login() {
   return (
     <div>
       <FormBackground>
@@ -11,6 +11,4 @@ const Login = () => {
       <TestimonialsSection />
     </div>
   );
-};
-
-export default Login;
+}
