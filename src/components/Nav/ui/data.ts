@@ -9,6 +9,7 @@ export const navLinks: NavLink[] = [
   { id: 2, name: "Careers", href: "/careers/" },
   { id: 3, name: "About", href: "/about/" },
   { id: 4, name: "Security", href: "/security/" },
+  { id: 5, name: "Credits", href: "/credits/" },
 ];
 
 export const login = {
