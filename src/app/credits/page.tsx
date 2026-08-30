@@ -10,7 +10,7 @@ export default function Credits() {
         </h1>
         <p className="flex flex-col">
           <Link
-            href="https://www.flaticon.com/ru/free-icon/user_1946429#"
+            href="https://www.flaticon.com/ru/free-icon/user_1144760"
             target="_blank"
             rel="noopener"
             title="Profile icon from Flaticon"
