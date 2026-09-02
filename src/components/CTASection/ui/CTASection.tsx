@@ -10,7 +10,7 @@ const CTASection = () => {
   const { data: session } = authClient.useSession();
 
   return (
-    <div className="relative m-auto h-auto w-full bg-grey-110 border border-grey-150 rounded-[20px] p-7.5 xs:w-89.5 md:w-140 md:p-9 lg:w-full lg:p-15 2xl:p-20">
+    <div className="relative m-auto h-auto w-full bg-grey-110 border border-grey-150 rounded-[20px] mt-20 p-7.5 xs:w-89.5 md:w-140 md:mt-30 md:p-9 lg:w-full lg:p-15 2xl:p-20 2xl:mt-37.5">
       <div className="absolute inset-0 z-1 bg-grey-110 rounded-[20px] h-full w-full xl:w-102.75 2xl:w-[585.2px]" />
       <div className="absolute inset-0 z-5 h-full w-full rounded-[20px] bg-linear-to-r from-transparent to-grey-110 from-0% to-60% xl:from-70% xl:to-100% xl:w-102.75 2xl:w-[585.2px]" />
       <div className="absolute -top-px -left-px opacity-20 h-full w-full bg-linear-to-tl from-transparent from-92% to-primary-600 to-100% rounded-[20px]" />

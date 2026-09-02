@@ -11,7 +11,7 @@ const TestimonialsSection = () => {
   const [isToggle, setIsToggle] = useState<boolean>(true);
 
   return (
-    <div className="my-20 md:my-30 2xl:my-37.5">
+    <div className="mt-20 md:mt-30 2xl:mt-37.5">
       <div className="flex flex-col items-center justify-center md:items-end md:justify-between md:flex-row">
         <div className="text-center md:text-left pb-5 md:pb-0 lg:w-153.25 xl:w-205.25">
           <h2 className="font-lexend font-medium text-[28px] 2xl:text-[38px] text-white-absolute pb-2.5">
