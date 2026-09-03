@@ -5,7 +5,7 @@ import meetingImage from "@/assets/images/meeting_d.webp";
 const CareersHero = () => {
   return (
     <div className="relative w-full flex flex-col items-center">
-      <div className="relative w-72 mt-7.5 p-3.5 rounded-[20px] bg-grey-110 xs:w-89.25 md:w-164 md:p-10 lg:w-full lg:flex lg:flex-row-reverse 2xl:mt-12.5 2xl:p-12.5 desktop:mt-13.25 ">
+      <div className="relative w-72 mt-7.5 p-3.5 rounded-[20px] bg-grey-110 xs:w-89.25 sm:w-fit sm:p-7 md:p-10 lg:w-full lg:flex lg:flex-row-reverse 2xl:mt-12.5 2xl:p-12.5 desktop:mt-13.25 ">
         <Image
           src={abstractImage}
           width={325}
@@ -19,19 +19,19 @@ const CareersHero = () => {
           src={meetingImage}
           width={329}
           height={253}
-          sizes="(max-width: 767px) 329px, (min-width: 768px) 715px, (min-width: 1920px) 968px"
+          sizes="(max-width: 539px) 329px, (min-width: 540px) 715px, (min-width: 1920px) 968px"
           priority
-          className="relative top-0 h-auto w-82.25 z-1 object-cover rounded-2xl md:h-142 md:w-178.75 lg:right-0 desktop:w-242"
+          className="relative top-0 h-auto w-82.25 z-1 object-cover rounded-2xl sm:h-142 sm:w-178.75 lg:right-0 desktop:w-242"
           alt="Meeting image"
         />
         <div className="relative h-auto w-full z-1 bg-grey-100 rounded-[20px] -mt-10 p-6 xs:w-full md:-mt-20 md:p-15 lg:absolute lg:w-164.5 lg:mt-10 lg:ml-10 lg:rounded-tr-none lg:rounded-br-[60px] lg:top-0 lg:left-0 2xl:mt-12.5 2xl:ml-12.5 2xl:p-20 desktop:w-197.75 desktop:rounded-br-[80px]">
-          <section className="relative text-center w-auto xs:w-70.25 md:w-full md:text-left">
+          <section className="relative text-center w-fit md:text-left">
             <h1 className="font-lexend font-medium text-white-absolute text-[28px] pb-2 md:pb-2.5 xl:text-[38px] xl:pb-3.5 2xl:text-[48px]">
               Welcome to{" "}
               <span className="font-lexend font-medium text-primary-600 text-[28px] xl:text-[38px] 2xl:text-[48px]">
                 YourBank
               </span>{" "}
-              Careers
+              Careers!
             </h1>
             <p className="font-lexend font-light text-grey-700 text-[14px] md:text-[16px] 2xl:text-lg">
               Join our team and embark on a rewarding journey in the banking
